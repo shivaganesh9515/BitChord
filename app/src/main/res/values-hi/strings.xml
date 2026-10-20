@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BitChord</string>
+    <string name="app_name">SlickBit</string>
     <string name="playback_channel_name">अभी चल रहा है</string>
     <string name="download_channel_name">डाउनलोड</string>
     <string name="download_channel_description">आपके संगीत फ़ोल्डर में सेव हो रहे गाने</string>
@@ -498,7 +498,7 @@
     <string name="biggest_day_note">आपका सबसे बड़ा दिन %1$s था, जिसमें %2$s सुना गया।</string>
     <string name="close_replay">Replay बंद करें</string>
     <string name="couldnt_draw_picture">तस्वीर नहीं बन सकी</string>
-    <string name="default_replay_holder">BitChord श्रोता</string>
+    <string name="default_replay_holder">SlickBit श्रोता</string>
     <string name="different_albums">अलग-अलग एल्बम</string>
     <string name="genres_pending">आपके सुनने का इतिहास बढ़ने पर शैलियां दिखेंगी</string>
     <string name="hour_am">%1$d AM</string>
@@ -1310,7 +1310,7 @@
     <string name="replay_songs_end_week"> ने आपका हफ़्ता भर दिया।</string>
     <string name="replay_summary_end_week">हफ़्ता</string>
     <string name="replay_this_week">इस हफ़्ते</string>
-    <string name="onboarding_title">लाखों गाने, BitChord पर स्ट्रीम करें</string>
+    <string name="onboarding_title">लाखों गाने, SlickBit पर स्ट्रीम करें</string>
     <string name="onboarding_name_prompt">हम आपको क्या कहकर बुलाएँ?</string>
     <string name="onboarding_name_hint">आपका नाम</string>
     <string name="onboarding_name_footer">साथ सुनें इस्तेमाल करने पर दोस्तों को यह दिखता है। इसे बाद में सेटिंग में बदला जा सकता है।</string>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BitChord</string>
+    <string name="app_name">SlickBit</string>
     <string name="playback_channel_name">正在播放</string>
     <string name="download_channel_name">下载</string>
     <string name="download_channel_description">正在保存到你的音乐文件夹的歌曲</string>
@@ -483,7 +483,7 @@
     <string name="biggest_day_note">你收听最多的一天是 %1$s，共收听了 %2$s。</string>
     <string name="close_replay">关闭 Replay</string>
     <string name="couldnt_draw_picture">无法生成图片</string>
-    <string name="default_replay_holder">BitChord 听众</string>
+    <string name="default_replay_holder">SlickBit 听众</string>
     <string name="different_albums">不同专辑</string>
     <string name="genres_pending">随着收听记录增多，流派信息会逐渐显示</string>
     <string name="hour_am">上午%1$d点</string>
@@ -1281,7 +1281,7 @@
     <string name="replay_songs_end_week"> 填满了你的这一周。</string>
     <string name="replay_summary_end_week">周</string>
     <string name="replay_this_week">本周</string>
-    <string name="onboarding_title">数百万首歌曲，在 BitChord 上畅听</string>
+    <string name="onboarding_title">数百万首歌曲，在 SlickBit 上畅听</string>
     <string name="onboarding_name_prompt">我们该怎么称呼你？</string>
     <string name="onboarding_name_hint">你的名字</string>
     <string name="onboarding_name_footer">使用“一起听”时，好友会看到这个名字。你可以稍后在“设置”中修改。</string>

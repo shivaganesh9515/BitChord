@@ -4,6 +4,7 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
@@ -413,15 +414,14 @@ private fun StoryChrome(
                 modifier = Modifier.weight(1f),
             )
             // The mark and the word together, the way the card carries it.
-            Icon(
+            Image(
                 painter = painterResource(R.drawable.ic_logo),
-                contentDescription = null,
-                tint = Color.White.copy(alpha = 0.9f),
-                modifier = Modifier.size(width = 26.dp, height = 17.dp),
+                contentDescription = "SlickBit logo",
+                modifier = Modifier.size(20.dp),
             )
             Spacer(Modifier.width(7.dp))
             Text(
-                text = "BitChord",
+                text = "SlickBit",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.W700,
                 color = Color.White.copy(alpha = 0.9f),

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BitChord</string>
+    <string name="app_name">SlickBit</string>
     <string name="playback_channel_name">Reproduciendo</string>
     <string name="download_channel_name">Descargas</string>
     <string name="download_channel_description">Canciones guardadas en tu carpeta Música</string>
@@ -511,7 +511,7 @@
     <string name="biggest_day_note">Tu día con más actividad fue el %1$s, con %2$s de reproducción.</string>
     <string name="close_replay">Cerrar Replay</string>
     <string name="couldnt_draw_picture">No se pudo crear la imagen</string>
-    <string name="default_replay_holder">Oyente de BitChord</string>
+    <string name="default_replay_holder">Oyente de SlickBit</string>
     <string name="different_albums">Álbumes diferentes</string>
     <string name="genres_pending">Los géneros aparecerán cuando aumente tu historial de reproducción</string>
     <string name="hour_am">%1$d a. m.</string>
@@ -1282,7 +1282,7 @@
     <string name="replay_songs_end_week"> llenaron tu semana.</string>
     <string name="replay_summary_end_week">semana</string>
     <string name="replay_this_week">Esta semana</string>
-    <string name="onboarding_title">Millones de canciones, en streaming en BitChord</string>
+    <string name="onboarding_title">Millones de canciones, en streaming en SlickBit</string>
     <string name="onboarding_name_prompt">¿Cómo quieres que te llamemos?</string>
     <string name="onboarding_name_hint">Tu nombre</string>
     <string name="onboarding_name_footer">Tus amigos lo ven cuando usas Escuchar juntos. Puedes cambiarlo más tarde en Ajustes.</string>

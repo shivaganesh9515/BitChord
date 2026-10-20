@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">BitChord</string>
+    <string name="app_name">SlickBit</string>
     <string name="playback_channel_name">מתנגן כעת</string>
     <string name="download_channel_name">הורדות</string>
     <string name="download_channel_description">שירים שנשמרים בתיקיית המוזיקה שלך</string>
@@ -462,7 +462,7 @@
     <string name="biggest_day_note">היום הגדול ביותר שלך היה %1$s עם %2$s של האזנה.</string>
     <string name="close_replay">סגור Replay</string>
     <string name="couldnt_draw_picture">לא ניתן ליצור תמונה</string>
-    <string name="default_replay_holder">מאזין BitChord</string>
+    <string name="default_replay_holder">מאזין SlickBit</string>
     <string name="different_albums">אלבומים שונים</string>
     <string name="genres_pending">ז\'אנרים יופיעו ככל שהיסטוריית ההאזנה שלך תגדל</string>
     <string name="hour_am">%1$d AM</string>
@@ -1315,7 +1315,7 @@
     <string name="replay_songs_end_week"> מילאו את השבוע שלך.</string>
     <string name="replay_summary_end_week">שבוע</string>
     <string name="replay_this_week">השבוע</string>
-    <string name="onboarding_title">מיליוני שירים, בסטרימינג ב-BitChord</string>
+    <string name="onboarding_title">מיליוני שירים, בסטרימינג ב-SlickBit</string>
     <string name="onboarding_name_prompt">איך לקרוא לך?</string>
     <string name="onboarding_name_hint">השם שלך</string>
     <string name="onboarding_name_footer">חברים רואים את זה כשמאזינים יחד. אפשר לשנות זאת מאוחר יותר בהגדרות.</string>

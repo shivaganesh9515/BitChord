@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BitChord</string>
+    <string name="app_name">SlickBit</string>
     <string name="playback_channel_name">Sedang diputar</string>
     <string name="download_channel_name">Unduhan</string>
     <string name="download_channel_description">Lagu yang sedang disimpan ke folder Musik Anda</string>
@@ -483,7 +483,7 @@
     <string name="biggest_day_note">Hari terbesar Anda adalah %1$s dengan %2$s waktu mendengarkan.</string>
     <string name="close_replay">Tutup Replay</string>
     <string name="couldnt_draw_picture">Tidak dapat membuat gambar</string>
-    <string name="default_replay_holder">Pendengar BitChord</string>
+    <string name="default_replay_holder">Pendengar SlickBit</string>
     <string name="different_albums">Album yang berbeda</string>
     <string name="genres_pending">Genre akan muncul seiring bertambahnya riwayat mendengarkan Anda</string>
     <string name="hour_am">%1$d AM</string>
@@ -1287,7 +1287,7 @@
     <string name="replay_songs_end_week"> mengisi minggu Anda.</string>
     <string name="replay_summary_end_week">minggu</string>
     <string name="replay_this_week">Minggu ini</string>
-    <string name="onboarding_title">Jutaan lagu, streaming di BitChord</string>
+    <string name="onboarding_title">Jutaan lagu, streaming di SlickBit</string>
     <string name="onboarding_name_prompt">Anda ingin dipanggil apa?</string>
     <string name="onboarding_name_hint">Nama Anda</string>
     <string name="onboarding_name_footer">Teman akan melihatnya saat Anda memakai Dengarkan Bersama. Anda bisa mengubahnya nanti di Pengaturan.</string>

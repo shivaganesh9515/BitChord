@@ -501,10 +501,9 @@ private fun HomeTitle(title: String, modifier: Modifier = Modifier) {
     val style = MaterialTheme.typography.displayLarge
     val logoHeight = with(LocalDensity.current) { (style.fontSize * LOGO_TO_FONT).toDp() }
     Column(modifier = modifier.padding(horizontal = PAGE_GUTTER, vertical = 8.dp)) {
-        Icon(
+        Image(
             painter = painterResource(Res.drawable.ic_logo),
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onBackground,
+            contentDescription = "SlickBit logo",
             modifier = Modifier
                 .padding(bottom = 14.dp)
                 .height(logoHeight)
@@ -521,8 +520,8 @@ private fun HomeTitle(title: String, modifier: Modifier = Modifier) {
 /** The wordmark's height against the heading's font size. */
 private const val LOGO_TO_FONT = 0.9f
 
-/** ic_logo's viewport, 730 x 484. */
-private const val LOGO_ASPECT = 730f / 484f
+/** SlickBit's compact monogram is square. */
+private const val LOGO_ASPECT = 1f
 
 /**
  * Shared by the home feed, Explore and Library so headings line up across tabs.

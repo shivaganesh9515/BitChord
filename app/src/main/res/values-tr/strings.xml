@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BitChord</string>
+    <string name="app_name">SlickBit</string>
     <string name="playback_channel_name">Şu an çalıyor</string>
     <string name="download_channel_name">İndirmeler</string>
     <string name="download_channel_description">Müzik klasörüne kaydedilen şarkılar</string>
@@ -527,7 +527,7 @@
     <string name="biggest_day_note">En yoğun günün %2$s dinlemeyle %1$s oldu.</string>
     <string name="close_replay">Replay\'i Kapat</string>
     <string name="couldnt_draw_picture">Resim oluşturulamadı</string>
-    <string name="default_replay_holder">BitChord dinleyicisi</string>
+    <string name="default_replay_holder">SlickBit dinleyicisi</string>
     <string name="different_albums">Farklı albümler</string>
     <string name="genres_pending">Dinleme geçmişin büyüdükçe türler görünecek</string>
     <string name="hour_am">%1$d, sabah</string>
@@ -1267,7 +1267,7 @@
     <string name="replay_songs_end_week"> haftanızı doldurdu.</string>
     <string name="replay_summary_end_week">hafta</string>
     <string name="replay_this_week">Bu hafta</string>
-    <string name="onboarding_title">Milyonlarca şarkı, BitChord’da akışta</string>
+    <string name="onboarding_title">Milyonlarca şarkı, SlickBit’da akışta</string>
     <string name="onboarding_name_prompt">Size nasıl hitap edelim?</string>
     <string name="onboarding_name_hint">Adınız</string>
     <string name="onboarding_name_footer">Birlikte Dinle’yi kullandığınızda arkadaşlarınız bunu görür. Daha sonra Ayarlar’dan değiştirebilirsiniz.</string>

@@ -1,6 +1,7 @@
 package com.music.bitchord.wear.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -102,18 +103,14 @@ fun AmbientPlayer(np: NowPlaying, ambient: Ambient) {
             )
         }
         // The Home page's mark, as Spotify keeps its own at the foot of the AOD.
-        Icon(
+        Image(
             painter = painterResource(R.drawable.ic_logo),
-            contentDescription = null,
-            tint = secondary,
+            contentDescription = "SlickBit logo",
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .offset(shift.x.dp, shift.y.dp)
                 .padding(bottom = h * 0.09f)
-                .size(width = h * 0.11f * LOGO_ASPECT, height = h * 0.11f),
+                .size(h * 0.11f),
         )
     }
 }
-
-/** ic_logo's viewport, 730 x 484 — as the phone's Home draws it. */
-private const val LOGO_ASPECT = 730f / 484f
