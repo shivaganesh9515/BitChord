@@ -14,15 +14,16 @@ jobs:
     name: Desktop · Linux
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Write local.properties
         run: |
@@ -39,13 +40,13 @@ jobs:
 
       - name: The analyser is in the jar
         run: |
-          jar=$(ls desktopApp/build/compose/binaries/main/app/BitChord/lib/app/desktopApp*.jar)
-          jar tf "$jar" | grep -q 'native/libbitchord_analysis.so'
+          jar=$(ls desktopApp/build/compose/binaries/main/app/SlickChord/lib/app/desktopApp*.jar)
+          jar tf "$jar" | grep -q 'native/libslickchord_analysis.so'
           jar tf "$jar" | grep -q 'models/.*\.onnx'
 
       - name: Upload test reports
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: desktop-linux-test-reports
           path: |
@@ -56,15 +57,16 @@ jobs:
     name: Desktop · Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Write local.properties
         shell: bash
@@ -84,15 +86,15 @@ jobs:
       - name: The analyser is in the jar
         shell: bash
         run: |
-          jar=$(ls desktopApp/build/compose/binaries/main/app/BitChord/app/desktopApp*.jar)
-          jar tf "$jar" | grep -q 'native/bitchord_analysis.dll'
+          jar=$(ls desktopApp/build/compose/binaries/main/app/SlickChord/app/desktopApp*.jar)
+          jar tf "$jar" | grep -q 'native/slickchord_analysis.dll'
           jar tf "$jar" | grep -q 'models/.*\.onnx'
           # WinRT, so only MSVC can build it and only this job ever does.
-          jar tf "$jar" | grep -q 'native/bitchord_smtc.dll'
+          jar tf "$jar" | grep -q 'native/slickchord_smtc.dll'
 
       - name: Upload test reports
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: desktop-windows-test-reports
           path: |
@@ -103,15 +105,16 @@ jobs:
     name: Desktop · macOS
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Write local.properties
         run: |
@@ -128,12 +131,12 @@ jobs:
 
       - name: The analyser and models are in the jar
         run: |
-          jar=$(ls desktopApp/build/compose/binaries/main/app/BitChord.app/Contents/app/desktopApp*.jar)
+          jar=$(ls desktopApp/build/compose/binaries/main/app/SlickChord.app/Contents/app/desktopApp*.jar)
           jar tf "$jar" | grep -q 'models/.*\.onnx'
 
       - name: Upload test reports
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: desktop-macos-test-reports
           path: |
@@ -144,15 +147,16 @@ jobs:
     name: Android
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           java-version: '17'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Write local.properties
         run: |
@@ -168,14 +172,14 @@ jobs:
         run: ./gradlew assembleDevDebug
 
       - name: Upload the dev APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: bitchord-dev-debug
+          name: slickchord-dev-debug
           path: app/build/outputs/apk/dev/debug/*.apk
 
       - name: Upload test reports
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-test-reports
           path: app/build/reports/tests/
@@ -187,7 +191,7 @@ jobs:
       run:
         working-directory: backend
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-go@v5
         with:

@@ -20,15 +20,16 @@ jobs:
     name: Linux · AppImage, deb, rpm
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Work out the version
         id: version
@@ -83,7 +84,7 @@ jobs:
           cp desktopApp/build/compose/binaries/main/rpm/*.rpm "dist/SlickChord-$v-linux-x86_64.rpm"
           ls -lh dist
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: linux-artifacts
           path: dist/*
@@ -92,15 +93,16 @@ jobs:
     name: Windows · installer, msi, portable
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: WiX Toolset 3
         shell: pwsh
@@ -155,7 +157,7 @@ jobs:
             "desktopApp/build/compose/binaries/main/app/SlickChord/*" | Out-Null
           Get-ChildItem dist | Format-Table Name, Length
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: windows-artifacts
           path: dist/*
@@ -171,15 +173,16 @@ jobs:
             arch: x64
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Work out the version
         id: version
@@ -224,7 +227,7 @@ jobs:
           ditto -c -k --keepParent desktopApp/build/compose/binaries/main/app/SlickChord.app "dist/SlickChord-$v-macos-$arch.zip"
           ls -lh dist
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: macos-${{ matrix.arch }}-artifacts
           path: dist/*
@@ -233,15 +236,16 @@ jobs:
     name: Android · signed APKs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v5
+      - name: Set up JDK 17
+        uses: actions/setup-java@v6
         with:
-          java-version: '21'
+          java-version: '17'
           distribution: 'temurin'
+          cache: gradle
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
 
       - name: Set up release signing
         env:
@@ -271,7 +275,7 @@ jobs:
           cp app/build/outputs/apk/prod/release/app-prod-armeabi-v7a-release.apk "dist/SlickChord-${version}_armeabi-v7a.apk"
           cp app/build/outputs/apk/prod/release/app-prod-x86_64-release.apk "dist/SlickChord-${version}_x86_64.apk"
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: android-artifacts
           path: dist/*
@@ -281,7 +285,7 @@ jobs:
     needs: [linux, windows, macos, android]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           pattern: "*-artifacts"
           merge-multiple: true

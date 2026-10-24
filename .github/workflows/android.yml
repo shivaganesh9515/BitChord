@@ -11,23 +11,25 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v6
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
+
+    - uses: gradle/actions/setup-gradle@v5
 
     - name: Setup Secrets (Keystore & local.properties)
       run: |
         echo "LASTFM_API_KEY=${{ secrets.LASTFM_API_KEY }}" > local.properties
         echo "LASTFM_SECRET=${{ secrets.LASTFM_SECRET }}" >> local.properties
 
-        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > bitchord-release.jks
+        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > slickchord-release.jks
         {
-          echo "storeFile=bitchord-release.jks"
+          echo "storeFile=slickchord-release.jks"
           echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}"
           echo "keyAlias=${{ secrets.KEY_ALIAS }}"
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}"
@@ -40,16 +42,16 @@ jobs:
       run: ./gradlew assembleProdRelease
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name: bitchord-prod-release-signed
+        name: slickchord-prod-release-signed
         path: app/build/outputs/apk/prod/release/*.apk
 
     # Built by the same assembleProdRelease, with the same key. The watch app
     # only pairs with a phone app signed by the same key, so a prod watch APK
     # for these phone builds can only come from here, never a local build.
     - name: Upload Wear OS APK Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name: bitchord-wear-prod-release-signed
+        name: slickchord-wear-prod-release-signed
         path: wearos/build/outputs/apk/prod/release/*.apk

@@ -5,7 +5,7 @@
  * the report by name. Light first, then dark under prefers-color-scheme.
  *
  * Apple serves higher-contrast text alphas and a deeper key colour to browsers
- * without the system SF font. BitChord renders DM Sans everywhere, so those
+ * without the system SF font. SlickChord renders DM Sans everywhere, so those
  * variants are the ones used here (report §9).
  */
 
@@ -108,6 +108,13 @@
   --glassMaterialInnerStrokeAlpha: 0.05;
   --glassMaterialBackdropFilter: saturate(220%) blur(16px);
 
+  /* Liquid glass navbar: stronger blur than the player pill, hairline edges. */
+  --glassNavBlur: saturate(200%) blur(24px);
+  --glassNavBG: rgba(var(--pageBG-rgb), 0.55);
+  --glassNavHairline: var(--labelDivider);
+  --glassNavSelection: rgba(var(--keyColor-rgb), 0.15);
+  --glassNavSelectionHover: rgba(var(--keyColor-rgb), 0.25);
+
   --systemStandardThinMaterialSover: #f6f6f67a;
   --systemStandardThickMaterialSover: #f6f6f6b8;
   --systemHeaderMaterialSover: #ffffffcc;
@@ -188,6 +195,9 @@
     --glassMaterialShadowColor: #00000033;
     --glassMaterialInnerStroke: #ffffff;
     --glassMaterialInnerStrokeAlpha: 0.25;
+
+    /* Liquid glass navbar (dark). */
+    --glassNavBG: rgba(var(--pageBG-rgb), 0.55);
 
     --systemStandardThinMaterialSover: #28282880;
     --systemStandardThickMaterialSover: #282828b3;
